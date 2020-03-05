@@ -33,9 +33,11 @@ public class TestDataInformation {
         return driver;
     }
     protected static WebDriver getWaitTime2() throws InterruptedException {
-        Thread.sleep(15000);
+        Thread.sleep(20000);
         return driver;
     }
+
+
 }
 
 
