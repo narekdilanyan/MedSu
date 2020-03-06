@@ -17,6 +17,21 @@ public class SeniorAdminMapPage extends TestDataInformation {
     // Section 3 Links
     private By thirdSectionLink = By.xpath("//span[contains(text(),'3. Record of CPD')]");
 
+    // Section 4 links
+    private By fourthSectionLink = By.xpath("//*[@id=\"sections-menu-wrapper\"]/ul/li[4]/div/span[2]");
+
+    // Section 5 links
+    private By fifthSectionLink = By.xpath("//*[@id=\"sections-menu-wrapper\"]/ul/li[5]/div/span[2]");
+
+    // Section 6 links
+    private By sixthSectionLink = By.xpath("//*[@id=\"sections-menu-wrapper\"]/ul/li[6]/div/span[2]");
+
+    // Section 7 links
+    private By seventhSectionLink = By.xpath("//*[@id=\"sections-menu-wrapper\"]/ul/li[7]/div/span[2]");
+
+    // Section 10 links
+    private By tenthSectionLink = By.xpath("//*[@id=\"sections-menu-wrapper\"]/ul/li[10]/div/span[2]");
+
 
     // Section 1 Fields
     private By titleField = By.xpath("//div[@class='repeat-container']//div[1]//div[2]//div[2]//div[1]//textarea[1]");
@@ -31,7 +46,7 @@ public class SeniorAdminMapPage extends TestDataInformation {
 
     // Section 2 Fields
     private By titleField2 = By.xpath("//div[@class='repeat-container']//div[1]//div[2]//div[2]//div[1]//textarea[1]");
-    private By scopeOfWorkField = By.xpath("//div[@class='select-selected']");
+    private By scopeOfWorkField = By.xpath("//*[@id=\"section-3\"]/div/div/div/div[2]/div[4]/div[2]/div[2]/div[1]");
     private By scopeOfWorkItem = By.xpath("//div[@class='select-item']");
     private By developmentGoalField = By.xpath("//div[@class='full-width custom-form-control']//textarea[@class='form-control ng-pristine ng-untouched ng-valid ng-empty']");
     private By actionPlanField = By.xpath("//div[5]//div[2]//textarea[1]");
@@ -48,14 +63,76 @@ public class SeniorAdminMapPage extends TestDataInformation {
     private By cpdTypeField = By.xpath("//div[@id='check-cpd-type']//div[@class='select-selected'][contains(text(),'- None -')]");
     private By cpdTypeItem = By.xpath("//div[contains(text(),'Academic')]");
     private By cpdActivityDateField = By.xpath("//input[@class='form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty ng-valid-datetime']");
-    private By selectCpdActivityDate = By.xpath("//td[@id='datepicker-95-8874-16']//button[@class='btn btn-default btn-sm']");
-    private By cpdProgressField = By.xpath("//div[@class='select-selected select-arrow-active']");
+    private By selectCpdActivityDate = By.xpath("//button[@class='btn btn-sm btn-info ng-binding ng-scope']");
+    private By cpdProgressField = By.xpath("//*[@id=\"section-3\"]/div/div/div/div[2]/div[4]/div[1]/div[2]/div[1]");
     private By selectCpdProgressItem = By.xpath("//div[contains(text(),'In Progress')]");
-    private By scopeOfWorkField3 = By.xpath("//div[@class='custom-form-control custom-select scope-of-work-select ng-isolate-scope']//div[@class='select-selected select-arrow-active']");
-    private By selectScopeOfWorkField3 = By.xpath("//div[@class='select-selected select-arrow-active'][contains(text(),'Cross Role')]");
-    private By descriptionField = By.xpath("//textarea[@class='form-control ng-valid ng-empty ng-valid-parse ng-touched ng-pristine']");
-    private By reflectiveEvaluation = By.xpath("//div[@class='form-field col-sm-12']//textarea[@class='form-control ng-pristine ng-untouched ng-valid ng-empty']");
+    private By scopeOfWorkField3 = By.xpath("//div[@class='custom-form-control custom-select scope-of-work-select ng-isolate-scope']//div[@class='select-selected']");
+    private By selectScopeOfWorkField3 = By.xpath("//div[contains(text(),'Cross Role')]");
+    private By descriptionField = By.xpath("//div[@class='custom-form-control']//textarea[@class='form-control ng-pristine ng-untouched ng-valid ng-empty']");
+    private By reflectiveEvaluation = By.xpath("//div[@class='col-sm-12 custom-form-control']//textarea[@class='form-control ng-pristine ng-untouched ng-valid ng-empty']");
     private By gmpDomainsCheckBox = By.xpath("//div[@class='row col-md-12 col-xs-12']//div[1]//div[2]//label[1]");
+    private By summaryReflectionField = By.xpath("//*[@id=\"section-3\"]/div/div[2]/textarea");
+    private By appraisersCommentsField = By.xpath("//*[@id=\"section-wrapper\"]/form/div[3]/div/div/div/div[2]/textarea");
+
+    // Select 4 fields
+    private By titleField4 = By.xpath("//*[@id=\"section-4\"]/div/div/div/div[2]/div[2]/div/textarea");
+    private By scopeOfWork4Field = By.xpath("//*[@id=\"section-4\"]/div/div/div/div[2]/div[3]/div[2]/div[1]");
+    private By scopeOfWorkField4Item = By.xpath("//*[@id=\"section-4\"]/div/div/div/div[2]/div[3]/div[2]/div[2]/div/div[2]");
+    private By improvementActivityField = By.xpath("//*[@id=\"section-4\"]/div/div/div/div[2]/div[4]/div[1]/div[2]/div[1]");
+    private By selectInImprovementActivityField = By.xpath("//*[@id=\"section-4\"]/div/div/div/div[2]/div[4]/div[1]/div[2]/div[2]/div/div[2]");
+    private By activityDateField = By.xpath("//*[@id=\"section-4\"]/div/div/div/div[2]/div[4]/div[2]/div[2]/p/input");
+    private By selectActivityDate = By.xpath("//*[@id=\"section-4\"]/div/div/div/div[2]/div[4]/div[2]/div[2]/p/ul/li[2]/span[1]/button[1]");
+    private By descriptionOfActivityField = By.xpath("//*[@id=\"section-4\"]/div/div/div/div[2]/div[5]/div/textarea");
+    private By reflectiveEvaluation4Field = By.xpath("//*[@id=\"section-4\"]/div/div/div/div[2]/div[6]/div/div[2]/textarea");
+    private By gmpDomains4Field = By.xpath("//*[@id=\"section-4\"]/div/div/div/div[2]/div[7]/div[2]/div/div[1]/div[2]/label");
+    private By summaryReflective4Field = By.xpath("//*[@id=\"section-4\"]/div/div/div[2]/textarea");
+    private By appraisersComments4Field = By.xpath("//*[@id=\"section-wrapper\"]/form/div[3]/div/div/div/div[2]/textarea");
+
+    // Select 5 fields
+    private By title5Field = By.xpath("//*[@id=\"section-5\"]/div/div/div/div[2]/div[2]/div/div/textarea");
+    private By scopeOfWork5Field = By.xpath("//*[@id=\"section-5\"]/div/div/div/div[2]/div[3]/div[2]/div[1]");
+    private By scopeOfWorkField5Item = By.xpath("//*[@id=\"section-5\"]/div/div/div/div[2]/div[3]/div[2]/div[2]/div/div[2]");
+    private By date5Field = By.xpath("//*[@id=\"section-5\"]/div/div/div/div[2]/div[4]/div/div[2]/p/input");
+    private By select5Date = By.xpath("//*[@id=\"section-5\"]/div/div/div/div[2]/div[4]/div/div[2]/p/ul/li[2]/span[1]/button[1]");
+    private By description5Field = By.xpath("//*[@id=\"section-5\"]/div/div/div/div[2]/div[5]/div/div[2]/textarea");
+    private By reflectiveEvaluation5Field = By.xpath("//*[@id=\"section-5\"]/div/div/div/div[2]/div[6]/div/div[2]/textarea");
+    private By gmpDomains5Field = By.xpath("//*[@id=\"section-5\"]/div/div/div/div[2]/div[7]/div[2]/div/div[1]/div[2]/label");
+    private By summaryReflective5Field = By.xpath("//*[@id=\"section-5\"]/div/div[2]/textarea");
+    private By appraisersComments5Field = By.xpath("//*[@id=\"section-wrapper\"]/form/div[4]/div/div/div/div[2]/textarea");
+
+    // Select 6 fields
+    private By title6Field = By.xpath("//*[@id=\"section-6\"]/div/div/div/div[2]/div[2]/div/textarea");
+    private By scopeOfWork6Field = By.xpath("//*[@id=\"section-6\"]/div/div/div/div[2]/div[3]/div[2]/div[1]");
+    private By scopeOfWorkField6Item = By.xpath("//*[@id=\"section-6\"]/div/div/div/div[2]/div[3]/div[2]/div[2]/div/div[2]");
+    private By typeOfFeedback6Field = By.xpath("//*[@id=\"section-6\"]/div/div/div/div[2]/div[4]/div[1]/div[2]/div[1]");
+    private By selectTypeOfFeedback6Item = By.xpath("//*[@id=\"section-6\"]/div/div/div/div[2]/div[4]/div[1]/div[2]/div[2]/div/div[2]");
+    private By date6Field = By.xpath("//*[@id=\"section-6\"]/div/div/div/div[2]/div[4]/div[2]/div/p/input");
+    private By select6Date = By.xpath("//*[@id=\"section-6\"]/div/div/div/div[2]/div[4]/div[2]/div/p/ul/li[2]/span[1]/button[1]");
+    private By description6Field = By.xpath("//*[@id=\"section-6\"]/div/div/div/div[2]/div[5]/div/div/textarea");
+    private By reflectiveEvaluation6Field = By.xpath("//*[@id=\"section-6\"]/div/div/div/div[2]/div[6]/div/div[2]/textarea");
+    private By gmpDomains6Field = By.xpath("//*[@id=\"section-6\"]/div/div/div/div[2]/div[7]/div[2]/div/div[1]/div[2]/label");
+    private By appraisersComments6Field = By.xpath("//*[@id=\"section-wrapper\"]/form/div[2]/div/div/div/div[2]/textarea");
+
+    // Select 7 fields
+    private By title7Field = By.xpath("//*[@id=\"section-7\"]/div/div/div[2]/div[2]/div/div/textarea");
+    private By scopeOfWork7Field = By.xpath("//*[@id=\"section-7\"]/div/div/div[2]/div[3]/div[2]/div[1]");
+    private By scopeOfWorkField7Item = By.xpath("//*[@id=\"section-7\"]/div/div/div[2]/div[3]/div[2]/div[2]/div/div[2]");
+    private By typeOfComplaintOrCompliment7Field = By.xpath("//*[@id=\"section-7\"]/div/div/div[2]/div[4]/div[1]/div/div[1]");
+    private By selectTypeOfCompliment7Item = By.xpath("//*[@id=\"section-7\"]/div/div/div[2]/div[4]/div[1]/div/div[2]/div/div[2]");
+    private By date7Field = By.xpath("//*[@id=\"section-7\"]/div/div/div[2]/div[4]/div[2]/div/p/input");
+    private By select7Date = By.xpath("//*[@id=\"section-7\"]/div/div/div[2]/div[4]/div[2]/div/p/ul/li[2]/span[1]/button[1]");
+    private By description7Field = By.xpath("//*[@id=\"section-7\"]/div/div/div[2]/div[5]/div/div/textarea");
+    private By reflectiveEvaluation7Field = By.xpath("//*[@id=\"section-7\"]/div/div/div[2]/div[6]/div/div[2]/textarea");
+    private By gmpDomains7Field = By.xpath("//*[@id=\"section-7\"]/div/div/div[2]/div[7]/div[2]/div/div[1]/div[2]/label");
+    private By summaryReflection7Field = By.xpath("//*[@id=\"section-7\"]/div/div[2]/textarea");
+    private By appraisersComments7Field = By.xpath("//*[@id=\"section-wrapper\"]/form/div[4]/div/div/div/div[2]/textarea");
+
+    // Select 10 fields
+    private By title10Field = By.xpath("//*[@id=\"section-10\"]/div/div/div[2]/div[2]/div/input");
+    private By scopeOfWork10Field = By.xpath("//*[@id=\"section-10\"]/div/div/div[2]/div[3]/div[2]/div[1]");
+    private By scopeOfWorkField10Item = By.xpath("//*[@id=\"section-10\"]/div/div/div[2]/div[3]/div[2]/div[2]/div/div[2]");
+    private By description10Field = By.xpath("//*[@id=\"section-10\"]/div/div/div[2]/div[4]/div/textarea");
+    private By appraisersComments10Field = By.xpath("//*[@id=\"section-wrapper\"]/form/div/div[2]/div/div/div/div[2]/textarea");
 
 
     //Buttons
@@ -69,26 +146,26 @@ public class SeniorAdminMapPage extends TestDataInformation {
     private By checkBoxOne = By.xpath("//div[@class='row col-md-12 col-xs-12']//div[1]//div[2]//label[1]");
 
 
-    // Items
-    private By item1 = By.xpath("//a[contains(text(),'1.bmp')]");
-    private By item2 = By.xpath("//a[contains(text(),'2.doc')]");
-    private By item3 = By.xpath("//a[contains(text(),'3.docx')]");
-    private By item4 = By.xpath("//a[contains(text(),'4.gif')]");
-    private By item5 = By.xpath("//a[contains(text(),'5.heic')]");
-    private By item6 = By.xpath("//a[contains(text(),'6.jpg')]");
-    private By item7 = By.xpath("//a[contains(text(),'7.key')]");
-    private By item8 = By.xpath("//a[contains(text(),'8.mov')]");
-    private By item9 = By.xpath("//a[contains(text(),'9.mp3')]");
-    private By item10 = By.xpath("//a[contains(text(),'10.mp4')]");
-    private By item11 = By.xpath("//a[contains(text(),'11.numbers')]");
-    private By item12 = By.xpath("//a[contains(text(),'12.pages')]");
-    private By item13 = By.xpath("//a[contains(text(),'13.pdf')]");
-    private By item14 = By.xpath("//a[contains(text(),'14.png')]");
-    private By item15 = By.xpath("//a[contains(text(),'15.ppt')]");
-    private By item16 = By.xpath("//a[contains(text(),'16.pptx')]");
-    private By item17 = By.xpath("//a[contains(text(),'17.txt')]");
-    private By item18 = By.xpath("//a[contains(text(),'18.xls')]");
-    private By item19 = By.xpath("//a[contains(text(),'19.xlsx')]");
+    // Files
+    private By file1 = By.xpath("//a[contains(text(),'1.bmp')]");
+    private By file2 = By.xpath("//a[contains(text(),'2.doc')]");
+    private By file3 = By.xpath("//a[contains(text(),'3.docx')]");
+    private By file4 = By.xpath("//a[contains(text(),'4.gif')]");
+    private By file5 = By.xpath("//a[contains(text(),'5.heic')]");
+    private By file6 = By.xpath("//a[contains(text(),'6.jpg')]");
+    private By file7 = By.xpath("//a[contains(text(),'7.key')]");
+    private By file8 = By.xpath("//a[contains(text(),'8.mov')]");
+    private By file9 = By.xpath("//a[contains(text(),'9.mp3')]");
+    private By file10 = By.xpath("//a[contains(text(),'10.mp4')]");
+    private By file11 = By.xpath("//a[contains(text(),'11.numbers')]");
+    private By file12 = By.xpath("//a[contains(text(),'12.pages')]");
+    private By file13 = By.xpath("//a[contains(text(),'13.pdf')]");
+    private By file14 = By.xpath("//a[contains(text(),'14.png')]");
+    private By file15 = By.xpath("//a[contains(text(),'15.ppt')]");
+    private By file16 = By.xpath("//a[contains(text(),'16.pptx')]");
+    private By file17 = By.xpath("//a[contains(text(),'17.txt')]");
+    private By file18 = By.xpath("//a[contains(text(),'18.xls')]");
+    private By file19 = By.xpath("//a[contains(text(),'19.xlsx')]");
     private Instant wait;
 
     // Void Methods
@@ -154,97 +231,97 @@ public class SeniorAdminMapPage extends TestDataInformation {
     }
 
     public String getItem1Text() {
-        String l = driver.findElement(item1).getText();
+        String l = driver.findElement(file1).getText();
         return l;
     }
 
     public String getItem2Text() {
-        String k = driver.findElement(item2).getText();
+        String k = driver.findElement(file2).getText();
         return k;
     }
 
     public String getItem3Text() {
-        String jk = driver.findElement(item3).getText();
+        String jk = driver.findElement(file3).getText();
         return jk;
     }
 
     public String getItem4Text() {
-        String mm = driver.findElement(item4).getText();
+        String mm = driver.findElement(file4).getText();
         return mm;
     }
 
     public String getItem5Text() {
-        String bb = driver.findElement(item5).getText();
+        String bb = driver.findElement(file5).getText();
         return bb;
     }
 
     public String getItem6Text() {
-        String ff = driver.findElement(item6).getText();
+        String ff = driver.findElement(file6).getText();
         return ff;
     }
 
     public String getItem7Text() {
-        String cc = driver.findElement(item7).getText();
+        String cc = driver.findElement(file7).getText();
         return cc;
     }
 
     public String getItem8Text() {
-        String xx = driver.findElement(item8).getText();
+        String xx = driver.findElement(file8).getText();
         return xx;
     }
 
     public String getItem9Text() {
-        String zz = driver.findElement(item9).getText();
+        String zz = driver.findElement(file9).getText();
         return zz;
     }
 
     public String getItem10Text() {
-        String aa = driver.findElement(item10).getText();
+        String aa = driver.findElement(file10).getText();
         return aa;
     }
 
     public String getItem11Text() {
-        String qq = driver.findElement(item11).getText();
+        String qq = driver.findElement(file11).getText();
         return qq;
     }
 
     public String getItem12Text() {
-        String ww = driver.findElement(item12).getText();
+        String ww = driver.findElement(file12).getText();
         return ww;
     }
 
     public String getItem13Text() {
-        String ee = driver.findElement(item13).getText();
+        String ee = driver.findElement(file13).getText();
         return ee;
     }
 
     public String getItem14Text() {
-        String rr = driver.findElement(item14).getText();
+        String rr = driver.findElement(file14).getText();
         return rr;
     }
 
     public String getItem15Text() {
-        String tt = driver.findElement(item15).getText();
+        String tt = driver.findElement(file15).getText();
         return tt;
     }
 
     public String getItem16Text() {
-        String yy = driver.findElement(item16).getText();
+        String yy = driver.findElement(file16).getText();
         return yy;
     }
 
     public String getItem17Text() {
-        String uu = driver.findElement(item17).getText();
+        String uu = driver.findElement(file17).getText();
         return uu;
     }
 
     public String getItem18Text() {
-        String ii = driver.findElement(item18).getText();
+        String ii = driver.findElement(file18).getText();
         return ii;
     }
 
     public String getItem19Text() {
-        String oo = driver.findElement(item19).getText();
+        String oo = driver.findElement(file19).getText();
         return oo;
     }
 
@@ -440,6 +517,16 @@ public class SeniorAdminMapPage extends TestDataInformation {
 
     }
 
+    public String getCPDTypeText() throws InterruptedException {
+        String te = driver.findElement(cpdTypeItem).getText();
+        return te;
+    }
+
+    public String getCPDProgressText() throws InterruptedException {
+        String te = driver.findElement(cpdProgressField).getText();
+        return te;
+    }
+
     public String getScopeOfWorkText() throws InterruptedException {
         String te = driver.findElement(scopeOfWorkField).getText();
         return te;
@@ -526,6 +613,7 @@ public class SeniorAdminMapPage extends TestDataInformation {
 
     public void typeInCPDHourField(String text) throws InterruptedException {
         driver.findElement(cpdHourField).clear();
+        getWaitTime();
         driver.findElement(cpdHourField).sendKeys(text);
     }
 
@@ -533,11 +621,11 @@ public class SeniorAdminMapPage extends TestDataInformation {
         driver.findElement(cpdTypeField).click();
         driver.findElement(cpdTypeItem).click();
         getWaitTime();
+        getWaitTime();
     }
 
     public void selectActivityDate() throws InterruptedException {
         driver.findElement(cpdActivityDateField).click();
-        getWaitTime();
         driver.findElement(selectCpdActivityDate).click();
         getWaitTime();
     }
@@ -558,8 +646,18 @@ public class SeniorAdminMapPage extends TestDataInformation {
     }
 
     public void typeInReflectiveEvaluationField3(String text) throws InterruptedException {
-        driver.findElement(descriptionField).clear();
-        driver.findElement(descriptionField).sendKeys(text);
+        driver.findElement(reflectiveEvaluation).clear();
+        driver.findElement(reflectiveEvaluation).sendKeys(text);
+    }
+
+    public void typeInSummaryReflectionField(String text) throws InterruptedException {
+        driver.findElement(summaryReflectionField).clear();
+        driver.findElement(summaryReflectionField).sendKeys(text);
+    }
+
+    public void typeInAppraisersCommentsField(String text) throws InterruptedException {
+        driver.findElement(appraisersCommentsField).clear();
+        driver.findElement(appraisersCommentsField).sendKeys(text);
     }
 
     public void clickOnGMPDomainsCheckBox() throws InterruptedException {
@@ -623,7 +721,7 @@ public class SeniorAdminMapPage extends TestDataInformation {
         getWaitTime();
         this.typeInCPDActivityTitleField("Test1");
         getWaitTime();
-        this.typeInCPDHourField("Test2");
+        this.typeInCPDHourField("2");
         getWaitTime();
         this.selectInCPDTypeField();
         getWaitTime();
@@ -637,9 +735,632 @@ public class SeniorAdminMapPage extends TestDataInformation {
         getWaitTime();
         this.typeInReflectiveEvaluationField3("Test4");
         getWaitTime();
+        this.typeInSummaryReflectionField("Test5");
+        getWaitTime();
+        this.typeInAppraisersCommentsField("Test6");
+        getWaitTime();
         this.clickOnGMPDomainsCheckBox();
         getWaitTime();
         return this;
     }
+
+    // Section 4 ////////////////////////////////////////////////////////////////////////////////
+
+    public void typeInTitleField4(String text) throws InterruptedException {
+        driver.findElement(titleField4).clear();
+        driver.findElement(titleField4).sendKeys(text);
+    }
+
+    public void selectInScopeOfWork4() throws InterruptedException {
+        driver.findElement(scopeOfWork4Field).click();
+        driver.findElement(scopeOfWorkField4Item).click();
+        getWaitTime();
+    }
+
+    public void selectImprovementActivity() throws InterruptedException {
+        driver.findElement(improvementActivityField).click();
+        driver.findElement(selectInImprovementActivityField).click();
+        getWaitTime();
+    }
+
+    public void selectActivityDate4() throws InterruptedException {
+        driver.findElement(activityDateField).click();
+        driver.findElement(selectActivityDate).click();
+    }
+
+    public void typeInDescriptionOfActivityField4(String text) throws InterruptedException {
+        driver.findElement(descriptionOfActivityField).clear();
+        driver.findElement(descriptionOfActivityField).sendKeys(text);
+    }
+
+    public void typeInReflectiveEvaluation4Field(String text) throws InterruptedException {
+        driver.findElement(reflectiveEvaluation4Field).clear();
+        driver.findElement(reflectiveEvaluation4Field).sendKeys(text);
+    }
+
+    public void selectGMPDomainsCheckBox() throws InterruptedException {
+        driver.findElement(gmpDomains4Field).click();
+
+    }
+
+    public void typeInSummaryReflection4Field(String text) throws InterruptedException {
+        driver.findElement(summaryReflective4Field).clear();
+        driver.findElement(summaryReflective4Field).sendKeys(text);
+    }
+
+    public void typeInAppraisersComments4Field(String text) throws InterruptedException {
+        driver.findElement(appraisersComments4Field).clear();
+        driver.findElement(appraisersComments4Field).sendKeys(text);
+    }
+
+    public void clickOnFourthSectionLink() {
+        driver.findElement(fourthSectionLink).click();
+    }
+
+    public String getScopeOfWork4Text() throws InterruptedException {
+        String te = driver.findElement(scopeOfWork4Field).getText();
+        return te;
+    }
+
+    public String getImprovementActivity4Text() throws InterruptedException {
+        String te = driver.findElement(improvementActivityField).getText();
+        return te;
+    }
+
+    public SeniorAdminMapPage OpenSection4() throws InterruptedException {
+        this.clickOnSectionMenuButton();
+        getWaitTime();
+        this.clickOnFourthSectionLink();
+        return this;
+    }
+
+    public void uploadFiles4() throws InterruptedException {
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/1.bmp");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/2.doc");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/3.docx");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/4.gif");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/5.heic");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/6.jpg");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/7.key");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/8.mov");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/9.mp3");
+        getWaitTime();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/10.mp4");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/11.numbers");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/12.pages");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/13.pdf");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/14.png");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/15.ppt");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/16.pptx");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/17.txt");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/18.xls");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-4 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/19.xlsx");
+        getWaitTime2();
+    }
+
+    public SeniorAdminMapPage CrudForSection4() throws InterruptedException {
+        this.clickOnTheAddNewItemButton();
+        getWaitTime();
+        this.typeInTitleField4("Test1");
+        getWaitTime();
+        this.selectInScopeOfWork4();
+        getWaitTime();
+        this.selectImprovementActivity();
+        getWaitTime();
+        this.selectActivityDate4();
+        getWaitTime();
+        this.typeInDescriptionOfActivityField4("Test3");
+        getWaitTime();
+        this.typeInReflectiveEvaluation4Field("Test4");
+        getWaitTime();
+        this.selectGMPDomainsCheckBox();
+        getWaitTime();
+        this.typeInSummaryReflection4Field("Test6");
+        getWaitTime();
+        this.typeInAppraisersComments4Field("Test6");
+        getWaitTime();
+        return this;
+    }
+
+    // Section 5 ////////////////////////////////////////////////////////////////////////////////
+
+    public void typeInTitleField5(String text) throws InterruptedException {
+        driver.findElement(title5Field).clear();
+        driver.findElement(title5Field).sendKeys(text);
+    }
+
+    public void selectInScopeOfWork5() throws InterruptedException {
+        driver.findElement(scopeOfWork5Field).click();
+        driver.findElement(scopeOfWorkField5Item).click();
+        getWaitTime();
+    }
+
+    public void selectDate5() throws InterruptedException {
+        driver.findElement(date5Field).click();
+        driver.findElement(select5Date).click();
+    }
+
+    public void typeInDescription5Field(String text) throws InterruptedException {
+        driver.findElement(description5Field).clear();
+        driver.findElement(description5Field).sendKeys(text);
+    }
+
+    public void typeInReflectiveEvaluation5Field(String text) throws InterruptedException {
+        driver.findElement(reflectiveEvaluation5Field).clear();
+        driver.findElement(reflectiveEvaluation5Field).sendKeys(text);
+    }
+
+    public void selectGMPDomains5CheckBox() throws InterruptedException {
+        driver.findElement(gmpDomains5Field).click();
+
+    }
+
+    public void typeInSummaryReflection5Field(String text) throws InterruptedException {
+        driver.findElement(summaryReflective5Field).clear();
+        driver.findElement(summaryReflective5Field).sendKeys(text);
+    }
+
+    public void typeInAppraisersComments5Field(String text) throws InterruptedException {
+        driver.findElement(appraisersComments5Field).clear();
+        driver.findElement(appraisersComments5Field).sendKeys(text);
+    }
+
+
+    public void clickOnFifthSection5Link() {
+        driver.findElement(fifthSectionLink).click();
+    }
+
+    public String getScopeOfWork5Text() throws InterruptedException {
+        String te = driver.findElement(scopeOfWork5Field).getText();
+        return te;
+    }
+
+    public SeniorAdminMapPage OpenSection5() throws InterruptedException {
+        this.clickOnSectionMenuButton();
+        getWaitTime();
+        this.clickOnFifthSection5Link();
+        return this;
+    }
+
+    public void uploadFiles5() throws InterruptedException {
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/1.bmp");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/2.doc");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/3.docx");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/4.gif");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/5.heic");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/6.jpg");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/7.key");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/8.mov");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/9.mp3");
+        getWaitTime();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/10.mp4");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/11.numbers");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/12.pages");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/13.pdf");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/14.png");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/15.ppt");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/16.pptx");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/17.txt");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/18.xls");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/19.xlsx");
+        getWaitTime();
+    }
+
+    public SeniorAdminMapPage CrudForSection5() throws InterruptedException {
+        this.clickOnTheAddNewItemButton();
+        getWaitTime();
+        this.typeInTitleField5("Test1");
+        getWaitTime();
+        this.selectInScopeOfWork5();
+        getWaitTime();
+        this.selectDate5();
+        getWaitTime();
+        this.typeInDescription5Field("Test3");
+        getWaitTime();
+        this.typeInReflectiveEvaluation5Field("Test4");
+        getWaitTime();
+        this.selectGMPDomains5CheckBox();
+        getWaitTime();
+        this.typeInSummaryReflection5Field("Test6");
+        getWaitTime();
+        this.typeInAppraisersComments5Field("Test6");
+        getWaitTime();
+        return this;
+    }
+
+    // Section 6 ////////////////////////////////////////////////////////////////////////////////
+
+    public void typeInTitleField6(String text) throws InterruptedException {
+        driver.findElement(title6Field).clear();
+        driver.findElement(title6Field).sendKeys(text);
+    }
+
+    public void selectInScopeOfWork6() throws InterruptedException {
+        driver.findElement(scopeOfWork6Field).click();
+        driver.findElement(scopeOfWorkField6Item).click();
+        getWaitTime();
+    }
+
+    public void selectInFeedbackField6() throws InterruptedException {
+        driver.findElement(typeOfFeedback6Field).click();
+        driver.findElement(selectTypeOfFeedback6Item).click();
+        getWaitTime();
+    }
+
+    public void selectDate6() throws InterruptedException {
+        driver.findElement(date6Field).click();
+        driver.findElement(select6Date).click();
+    }
+
+    public void typeInDescription6Field(String text) throws InterruptedException {
+        driver.findElement(description6Field).clear();
+        driver.findElement(description6Field).sendKeys(text);
+    }
+
+    public void typeInReflectiveEvaluation6Field(String text) throws InterruptedException {
+        driver.findElement(reflectiveEvaluation6Field).clear();
+        driver.findElement(reflectiveEvaluation6Field).sendKeys(text);
+    }
+
+    public void selectGMPDomains6CheckBox() throws InterruptedException {
+        driver.findElement(gmpDomains6Field).click();
+
+    }
+
+    public void typeInAppraisersComments6Field(String text) throws InterruptedException {
+        driver.findElement(appraisersComments6Field).clear();
+        driver.findElement(appraisersComments6Field).sendKeys(text);
+    }
+
+
+    public void clickOnSixthSection6Link() {
+        driver.findElement(sixthSectionLink).click();
+    }
+
+    public String getScopeOfWork6Text() throws InterruptedException {
+        String te = driver.findElement(scopeOfWork6Field).getText();
+        return te;
+    }
+
+    public String getTypeOfFeedback6Text() throws InterruptedException {
+        String te = driver.findElement(typeOfFeedback6Field).getText();
+        return te;
+    }
+
+    public SeniorAdminMapPage OpenSection6() throws InterruptedException {
+        this.clickOnSectionMenuButton();
+        getWaitTime();
+        this.clickOnSixthSection6Link();
+        return this;
+    }
+
+    public void uploadFiles6() throws InterruptedException {
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/1.bmp");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/2.doc");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/3.docx");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/4.gif");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/5.heic");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/6.jpg");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/7.key");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/8.mov");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/9.mp3");
+        getWaitTime();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/10.mp4");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/11.numbers");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/12.pages");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/13.pdf");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/14.png");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/15.ppt");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/16.pptx");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/17.txt");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/18.xls");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-6 > div > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/19.xlsx");
+        getWaitTime();
+    }
+
+    public SeniorAdminMapPage CrudForSection6() throws InterruptedException {
+        this.clickOnTheAddNewItemButton();
+        getWaitTime();
+        this.typeInTitleField6("Test1");
+        getWaitTime();
+        this.selectInScopeOfWork6();
+        getWaitTime();
+        this.selectInFeedbackField6();
+        getWaitTime();
+        this.selectDate6();
+        getWaitTime();
+        this.typeInDescription6Field("Test2");
+        getWaitTime();
+        this.typeInReflectiveEvaluation6Field("Test3");
+        getWaitTime();
+        this.selectGMPDomains6CheckBox();
+        getWaitTime();
+        this.typeInAppraisersComments6Field("Test6");
+        getWaitTime();
+        return this;
+    }
+
+    // Section 7 ////////////////////////////////////////////////////////////////////////////////
+
+    public void typeInTitleField7(String text) throws InterruptedException {
+        driver.findElement(title7Field).clear();
+        driver.findElement(title7Field).sendKeys(text);
+    }
+
+    public void selectInScopeOfWork7() throws InterruptedException {
+        driver.findElement(scopeOfWork7Field).click();
+        driver.findElement(scopeOfWorkField7Item).click();
+        getWaitTime();
+    }
+
+    public void setSelectTypeOfCompliment7Item() throws InterruptedException {
+        driver.findElement(typeOfComplaintOrCompliment7Field).click();
+        driver.findElement(selectTypeOfCompliment7Item).click();
+        getWaitTime();
+    }
+
+    public void selectDate7() throws InterruptedException {
+        driver.findElement(date7Field).click();
+        driver.findElement(select7Date).click();
+    }
+
+    public void typeInDescription7Field(String text) throws InterruptedException {
+        driver.findElement(description7Field).clear();
+        driver.findElement(description7Field).sendKeys(text);
+    }
+
+    public void typeInReflectiveEvaluation7Field(String text) throws InterruptedException {
+        driver.findElement(reflectiveEvaluation7Field).clear();
+        driver.findElement(reflectiveEvaluation7Field).sendKeys(text);
+    }
+
+    public void selectGMPDomains7CheckBox() throws InterruptedException {
+        driver.findElement(gmpDomains7Field).click();
+
+    }
+
+    public void typeInSummaryReflection7Field(String text) throws InterruptedException {
+        driver.findElement(summaryReflection7Field).clear();
+        driver.findElement(summaryReflection7Field).sendKeys(text);
+    }
+
+    public void typeInAppraisersComments7Field(String text) throws InterruptedException {
+        driver.findElement(appraisersComments7Field).clear();
+        driver.findElement(appraisersComments7Field).sendKeys(text);
+    }
+
+
+    public void clickOnSeventhSection7Link() {
+        driver.findElement(seventhSectionLink).click();
+    }
+
+    public String getScopeOfWork7Text() throws InterruptedException {
+        String te = driver.findElement(scopeOfWork7Field).getText();
+        return te;
+    }
+
+    public String getTypeOfComplaintOrCompliment7Text() throws InterruptedException {
+        String te = driver.findElement(typeOfComplaintOrCompliment7Field).getText();
+        return te;
+    }
+
+    public SeniorAdminMapPage OpenSection7() throws InterruptedException {
+        this.clickOnSectionMenuButton();
+        getWaitTime();
+        this.clickOnSeventhSection7Link();
+        return this;
+    }
+
+    public void uploadFiles7() throws InterruptedException {
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/1.bmp");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/2.doc");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/3.docx");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/4.gif");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/5.heic");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/6.jpg");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/7.key");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/8.mov");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/9.mp3");
+        getWaitTime();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/10.mp4");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/11.numbers");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/12.pages");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/13.pdf");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/14.png");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/15.ppt");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/16.pptx");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/17.txt");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/18.xls");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-7 > div > div > div.section-container > div:nth-child(10) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/19.xlsx");
+        getWaitTime();
+    }
+
+    public SeniorAdminMapPage CrudForSection7() throws InterruptedException {
+        this.clickOnTheAddNewItemButton();
+        getWaitTime();
+        this.typeInTitleField7("Test1");
+        getWaitTime();
+        this.selectInScopeOfWork7();
+        getWaitTime();
+        this.setSelectTypeOfCompliment7Item();
+        getWaitTime();
+        this.selectDate7();
+        getWaitTime();
+        this.typeInDescription7Field("Test2");
+        getWaitTime();
+        this.typeInReflectiveEvaluation7Field("Test3");
+        getWaitTime();
+        this.selectGMPDomains7CheckBox();
+        getWaitTime();
+        this.typeInSummaryReflection7Field("Test4");
+        getWaitTime();
+        this.typeInAppraisersComments7Field("Test5");
+        getWaitTime();
+        return this;
+    }
+
+    // Section 10 ////////////////////////////////////////////////////////////////////////////////
+
+    public void typeInTitleField10(String text) throws InterruptedException {
+        driver.findElement(title10Field).clear();
+        driver.findElement(title10Field).sendKeys(text);
+    }
+
+    public void selectInScopeOfWork10() throws InterruptedException {
+        driver.findElement(scopeOfWork10Field).click();
+        driver.findElement(scopeOfWorkField10Item).click();
+        getWaitTime();
+    }
+
+    public void typeInDescription10Field(String text) throws InterruptedException {
+        driver.findElement(description10Field).clear();
+        driver.findElement(description10Field).sendKeys(text);
+    }
+
+    public void typeInAppraisersComments10Field(String text) throws InterruptedException {
+        driver.findElement(appraisersComments10Field).clear();
+        driver.findElement(appraisersComments10Field).sendKeys(text);
+    }
+
+
+    public void clickOnTenthSection10Link() {
+        driver.findElement(tenthSectionLink).click();
+    }
+
+    public String getScopeOfWork10Text() throws InterruptedException {
+        String te = driver.findElement(scopeOfWork10Field).getText();
+        return te;
+    }
+
+    public SeniorAdminMapPage OpenSection10() throws InterruptedException {
+        this.clickOnSectionMenuButton();
+        getWaitTime();
+        this.clickOnTenthSection10Link();
+        return this;
+    }
+
+    public void uploadFiles10() throws InterruptedException {
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/1.bmp");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/2.doc");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/3.docx");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/4.gif");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/5.heic");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/6.jpg");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/7.key");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/8.mov");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/9.mp3");
+        getWaitTime();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/10.mp4");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/11.numbers");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/12.pages");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/13.pdf");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/14.png");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/15.ppt");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/16.pptx");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/17.txt");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/18.xls");
+        getWaitTime2();
+        driver.findElement(By.cssSelector("#section-10 > div > div > div.section-container > div:nth-child(7) > div > div > div > input[type=file]")).sendKeys("/home/qa/IdeaProjects/MedSu/src/test/java/files/19.xlsx");
+        getWaitTime();
+    }
+
+    public SeniorAdminMapPage CrudForSection10() throws InterruptedException {
+        this.clickOnTheAddNewItemButton();
+        getWaitTime();
+        this.typeInTitleField10("Test1");
+        getWaitTime();
+        this.selectInScopeOfWork10();
+        getWaitTime();
+        this.typeInDescription10Field("Test2");
+        getWaitTime();
+        this.typeInAppraisersComments10Field("Test3");
+        getWaitTime();
+        return this;
+    }
+
 }
 
